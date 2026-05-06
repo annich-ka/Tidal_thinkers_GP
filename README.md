@@ -1,5 +1,59 @@
 # Tidal_thinkers_GP
 
+## Flask Project Setup
+
+This project uses Flask.
+
+### Create and Activate a Virtual Environment
+
+On macOS or Linux:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+On Windows PowerShell:
+
+```bash
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the App
+
+```bash
+flask --app app run --debug
+```
+
+Then open:
+
+```text
+http://127.0.0.1:5000
+```
+
+### Current Project Structure
+
+```text
+app.py
+requirements.txt
+static/
+  css/
+    styles.css
+  js/
+    main.js
+templates/
+  base.html
+  index.html
+instance/
+```
+
 ## GitHub Workflow Guide
 
 This guide explains the basic Git/GitHub workflow for this group project. The goal is to keep everyone working on the latest version of the code and avoid accidentally overwriting each other's work.
