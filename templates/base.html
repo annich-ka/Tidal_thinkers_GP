@@ -14,9 +14,8 @@
   <body>
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
-        <a class="brand" href="{{ url_for('index') }}" aria-label="Tidal Thinkers home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Tidal Thinkers</span>
+        <a class="brand brand--header" href="{{ url_for('index') }}" aria-label="Tidal Thinkers home">
+          <img class="brand-icon brand-icon--decade" src="{{ url_for('static', filename='img/logo-ioc-decade-white.svg') }}" alt="">
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
