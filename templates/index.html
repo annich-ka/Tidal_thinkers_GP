@@ -1,10 +1,89 @@
 {% extends "base.html" %}
 
-{% block title %}Home | Tidal Thinkers{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-  <section class="intro">
-    <h1>Tidal Thinkers</h1>
-    <p>The Flask project is ready for the first feature work.</p>
+  <section class="hero hero--home">
+    <div class="content-wrap hero__content">
+      <p class="eyebrow eyebrow--light">UN Ocean Decade youth platform</p>
+      <h1>The ocean is changing faster than we think</h1>
+      <p class="hero__lede">But together we can still change its future.</p>
+    </div>
+  </section>
+
+  <section class="band band--blue" id="whats-happening">
+    <div class="content-wrap split-layout split-layout--wide">
+      <div class="section-copy section-copy--light">
+        <p class="eyebrow">The state of the ocean</p>
+        <h2>The oceans were at the origin of life.</h2>
+        <p>They still provide the basic conditions of our life on earth. The UN Ocean Decade turns that knowledge into a shared deadline for protection, restoration, and better choices.</p>
+      </div>
+
+      <div class="image-stack">
+        <img src="{{ url_for('static', filename='img/state-ocean.png') }}" alt="A blue ocean surface with waves and light." class="image-frame image-frame--small">
+        <div class="fact-panel">
+          <strong>The UN sees this decade as an opportunity.</strong>
+          <p>By 2030, at least 30% of our oceans must be protected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper">
+    <div class="content-wrap split-layout">
+      <div class="section-copy">
+        <p class="eyebrow">Curious to know more?</p>
+        <h2>Watch the documentary Our Oceans for the beauty and urgency of the sea.</h2>
+        <a class="text-link" href="{{ url_for('take_action') }}">Take action now</a>
+      </div>
+      <img src="{{ url_for('static', filename='img/documentary-ocean.png') }}" alt="Ocean documentary still with a deep blue underwater scene." class="poster-image">
+    </div>
+  </section>
+
+  <section class="band band--white problems">
+    <div class="content-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">Four pressure points</p>
+        <h2>Beautiful oceans have these four ugly problems</h2>
+      </div>
+
+      <div class="problem-grid">
+        <details class="problem-card">
+          <summary>
+            <img src="{{ url_for('static', filename='img/problem-deep-sea.png') }}" alt="A blue-toned vessel at sea.">
+            <span>Deep sea mining</span>
+          </summary>
+          <p>Mineral extraction can disturb habitats that formed over thousands of years and are still barely understood.</p>
+        </details>
+
+        <details class="problem-card">
+          <summary>
+            <img src="{{ url_for('static', filename='img/problem-overfishing.png') }}" alt="A pale blue ocean industrial scene.">
+            <span>Overfishing</span>
+          </summary>
+          <p>Taking more than ecosystems can replace weakens food webs and leaves coastal communities more exposed.</p>
+        </details>
+
+        <details class="problem-card">
+          <summary>
+            <img src="{{ url_for('static', filename='img/problem-pollution.png') }}" alt="A light blue ocean structure with dotted texture.">
+            <span>Pollution</span>
+          </summary>
+          <p>Plastic, chemical runoff, and noise move through the water long after the original source is gone.</p>
+        </details>
+
+        <details class="problem-card">
+          <summary>
+            <img src="{{ url_for('static', filename='img/problem-trawling.png') }}" alt="A blue and white seascape detail.">
+            <span>Bottom trawling</span>
+          </summary>
+          <p>Heavy gear can scrape the seabed, damage carbon-rich habitats, and reduce recovery for marine life.</p>
+        </details>
+      </div>
+
+      <div class="center-action">
+        <a class="cta cta--red" href="{{ url_for('take_action') }}">Take action!</a>
+      </div>
+    </div>
   </section>
 {% endblock %}

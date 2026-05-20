@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+  <section class="hero hero--action">
+    <div class="content-wrap hero__content">
+      <p class="eyebrow eyebrow--light">Take action</p>
+      <h1>Beautiful ocean needs mindful people.</h1>
+      <p class="hero__lede">Change is possible when science, policy, and daily choices move in the same direction.</p>
+    </div>
+  </section>
+
+  <section class="band band--paper">
+    <div class="content-wrap split-layout split-layout--wide">
+      <div class="section-copy">
+        <p class="eyebrow">One decade, one ocean</p>
+        <h2>Protect 30% of the ocean by 2030.</h2>
+        <p>The Ocean Decade gives every local action a global frame. Start with practical steps that lower pressure on marine habitats and help people understand what is at stake.</p>
+        <div class="action-tags" aria-label="Action areas">
+          <span>Protect habitats</span>
+          <span>Choose lower-impact seafood</span>
+          <span>Share ocean knowledge</span>
+          <span>Join local events</span>
+        </div>
+      </div>
+      <img src="{{ url_for('static', filename='img/action-30x30.png') }}" alt="Dotted fish illustrations marked with red location pins." class="image-frame">
+    </div>
+  </section>
+
+  <section class="action-panel action-panel--dark">
+    <div class="content-wrap action-panel__grid">
+      <div>
+        <p class="eyebrow">Problem 1: Overfishing</p>
+        <h2>Ask where your seafood comes from.</h2>
+        <p>Choose verified sustainable options, reduce waste, and support rules that keep fish populations above recovery thresholds.</p>
+      </div>
+      <img src="{{ url_for('static', filename='img/action-overfishing.png') }}" alt="Illustrated fish shapes and underwater forms in blue.">
+    </div>
+  </section>
+
+  <section class="action-panel">
+    <div class="content-wrap action-panel__grid action-panel__grid--reverse">
+      <div>
+        <p class="eyebrow">Problem 2: Deep sea pressure</p>
+        <h2>Protect places before extracting from them.</h2>
+        <p>Deep ocean ecosystems recover slowly. Follow proposed mining permits, share credible research, and back a precautionary approach.</p>
+      </div>
+      <img src="{{ url_for('static', filename='img/action-depth.png') }}" alt="A blue-toned ocean illustration with deep water details.">
+    </div>
+  </section>
+
+  <section class="action-panel action-panel--dark">
+    <div class="content-wrap action-panel__grid">
+      <div>
+        <p class="eyebrow">Problem 3: Pollution</p>
+        <h2>Stop waste before it reaches the water.</h2>
+        <p>Support deposit systems, refill habits, storm-drain cleanups, and stronger limits on chemical and plastic discharge.</p>
+      </div>
+      <img src="{{ url_for('static', filename='img/action-pollution.png') }}" alt="A blue ocean illustration with textured water forms.">
+    </div>
+  </section>
+
+  <section class="action-panel">
+    <div class="content-wrap action-panel__grid action-panel__grid--reverse">
+      <div>
+        <p class="eyebrow">Problem 4: Restoration</p>
+        <h2>Make room for habitats to return.</h2>
+        <p>Help restore dunes, shellfish reefs, kelp forests, and salt marshes that protect coastlines and store carbon.</p>
+      </div>
+      <img src="{{ url_for('static', filename='img/action-restoration.png') }}" alt="A blue underwater illustration with marine shapes.">
+    </div>
+  </section>
+
+  <section class="band band--blue events">
+    <div class="content-wrap split-layout">
+      <div class="section-copy section-copy--light">
+        <p class="eyebrow">Next events</p>
+        <h2>Meet the ocean community in North Holland.</h2>
+        <ul class="event-list">
+          <li>
+            <time datetime="2026-05-22">May 22, 2026</time>
+            <span>Coastal Signals: citizen science walk</span>
+          </li>
+          <li>
+            <time datetime="2026-06-06">June 6, 2026</time>
+            <span>Ultimate Depth: a journey to the bottom of the sea</span>
+          </li>
+        </ul>
+        <a class="cta cta--light" href="#contact">View calendar</a>
+      </div>
+      <img src="{{ url_for('static', filename='img/calendar-preview.png') }}" alt="Calendar inspiration board with ocean event blocks." class="calendar-preview">
+    </div>
+  </section>
+{% endblock %}

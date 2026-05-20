@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+  <section class="hero hero--about">
+    <div class="content-wrap hero__content">
+      <p class="eyebrow eyebrow--light">About</p>
+      <h1>From the Netherlands, for the world!</h1>
+      <p class="hero__lede">The committee connects scientists, students, makers, and local partners around ocean knowledge-based solutions.</p>
+    </div>
+  </section>
+
+  <section class="band band--white">
+    <div class="content-wrap">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Our approach</p>
+        <h2>Ocean knowledge becomes useful when people can act on it.</h2>
+      </div>
+
+      <div class="approach-grid">
+        <article class="image-card">
+          <img src="{{ url_for('static', filename='img/about-committee.png') }}" alt="People collaborating near the coast.">
+          <div>
+            <h3>About the committee</h3>
+            <p>We translate research, policy goals, and local questions into events and resources that people can actually use.</p>
+          </div>
+        </article>
+
+        <article class="image-card">
+          <img src="{{ url_for('static', filename='img/about-decade.png') }}" alt="An ocean and coastal landscape.">
+          <div>
+            <h3>About the decade</h3>
+            <p>The UN Ocean Decade is a global push to protect ocean health before 2030 and make better data available to communities.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper people">
+    <div class="content-wrap">
+      <div class="section-heading">
+        <p class="eyebrow">People</p>
+        <h2>These are the people who shape the future of the water.</h2>
+      </div>
+
+      <div class="people-grid">
+        <article class="person-card">
+          <span class="person-card__signal"></span>
+          <h3>Science translators</h3>
+          <p>Turn technical ocean research into language communities can understand.</p>
+        </article>
+        <article class="person-card">
+          <span class="person-card__signal"></span>
+          <h3>Local organizers</h3>
+          <p>Host walks, workshops, exhibitions, and volunteer actions along the coast.</p>
+        </article>
+        <article class="person-card">
+          <span class="person-card__signal"></span>
+          <h3>Policy watchers</h3>
+          <p>Track decisions that affect protected areas, fisheries, and restoration work.</p>
+        </article>
+        <article class="person-card">
+          <span class="person-card__signal"></span>
+          <h3>Creative partners</h3>
+          <p>Make the ocean visible through stories, installations, and learning tools.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--blue follow">
+    <div class="content-wrap follow__grid">
+      <div class="section-copy section-copy--light">
+        <p class="eyebrow">Follow us</p>
+        <h2>Follow us on our journey!</h2>
+      </div>
+      <a class="cta cta--light" href="#contact">View social media</a>
+    </div>
+  </section>
+{% endblock %}

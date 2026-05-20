@@ -4,17 +4,67 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{{ title or "Tidal Thinkers" }}{% endblock %}</title>
+    <meta name="description" content="Tidal Thinkers brings young ocean advocates together around the UN Ocean Decade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,600&family=Fraunces:ital,opsz,wght@1,9..144,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
   </head>
   <body>
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
-        <a class="brand" href="{{ url_for('index') }}">Tidal Thinkers</a>
+        <a class="brand" href="{{ url_for('index') }}" aria-label="Tidal Thinkers home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Tidal Thinkers</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+
+        <div class="nav-menu" id="primary-navigation">
+          <a class="nav-link{% if active_page == 'home' %} is-active{% endif %}" href="{{ url_for('index') }}">What's happening</a>
+          <a class="nav-link{% if active_page == 'take_action' %} is-active{% endif %}" href="{{ url_for('take_action') }}">Take action</a>
+          <a class="nav-link{% if active_page == 'about' %} is-active{% endif %}" href="{{ url_for('about') }}">About</a>
+        </div>
+
+        <a class="contact-link" href="#contact">Contact us</a>
       </nav>
     </header>
 
     <main class="site-main">
       {% block content %}{% endblock %}
     </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="content-wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand--footer" href="{{ url_for('index') }}" aria-label="Tidal Thinkers home">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>Tidal Thinkers</span>
+          </a>
+          <p>Ocean literacy, local action, and a shared decade for the sea.</p>
+        </div>
+
+        <form class="newsletter" data-newsletter>
+          <label for="newsletter-email">Get ocean updates</label>
+          <div class="newsletter-row">
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Email address" required>
+            <button type="submit">Subscribe</button>
+          </div>
+          <p class="form-message" data-form-message aria-live="polite"></p>
+        </form>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="{{ url_for('take_action') }}">Take action</a>
+          <a href="{{ url_for('about') }}">About</a>
+          <a href="mailto:hello@tidalthinkers.org">Email</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
