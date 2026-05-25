@@ -31,19 +31,6 @@
   </div>
 </section>
 
-<section class="band band--paper documentary-section">
-  <div class="documentary-layout">
-    <div class="documentary-copy">
-      <div class="section-copy">
-        <p class="eyebrow">Curious to know more?</p>
-        <h2>Watch the documentary Our Oceans for the beauty and urgency of the sea.</h2>
-      </div>
-    </div>
-    <img src="{{ url_for('static', filename='img/documentary-ocean.png') }}"
-      alt="Ocean documentary still with a deep blue underwater scene." class="poster-image documentary-image">
-  </div>
-</section>
-
 <section class="band band--white problems">
   <div class="content-wrap">
     <div class="section-heading">
@@ -104,6 +91,19 @@
     <div class="center-action">
       <a class="cta cta--red" href="{{ url_for('take_action') }}">Take action!</a>
     </div>
+  </div>
+</section>
+
+<section class="band band--paper documentary-section">
+  <div class="documentary-layout">
+    <div class="documentary-copy">
+      <div class="section-copy">
+        <p class="eyebrow">Curious to know more?</p>
+        <h2>Watch the documentary Our Oceans for the beauty and urgency of the sea.</h2>
+      </div>
+    </div>
+    <img src="{{ url_for('static', filename='img/documentary-ocean.png') }}"
+      alt="Ocean documentary still with a deep blue underwater scene." class="poster-image documentary-image">
   </div>
 </section>
 {% endblock %}
