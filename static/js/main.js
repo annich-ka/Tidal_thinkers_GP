@@ -1,4 +1,5 @@
 const header = document.querySelector(".site-header");
+const hero = document.querySelector(".hero");
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const newsletter = document.querySelector("[data-newsletter]");
@@ -6,6 +7,7 @@ const problemCards = document.querySelectorAll(".problem-card");
 const navLinks = document.querySelectorAll(".site-nav a[href]");
 const actionScrollSections = document.querySelectorAll("[data-action-scroll]");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const desktopHeaderQuery = window.matchMedia("(min-width: 981px)");
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -17,6 +19,12 @@ function smoothstep(value) {
 
 function updateHeaderState() {
   header?.classList.toggle("is-scrolled", window.scrollY > 180);
+
+  const heroBottom = hero?.getBoundingClientRect().bottom ?? Number.POSITIVE_INFINITY;
+  const headerClearance = header ? header.offsetHeight + 24 : 88;
+  const isPastHero = desktopHeaderQuery.matches && heroBottom <= headerClearance;
+
+  header?.classList.toggle("is-past-hero", isPastHero);
 }
 
 function resetActionScroll(section) {
@@ -216,3 +224,4 @@ updatePageState();
 window.addEventListener("scroll", updatePageState, { passive: true });
 window.addEventListener("resize", updatePageState);
 reducedMotionQuery.addEventListener("change", updatePageState);
+desktopHeaderQuery.addEventListener("change", updatePageState);
