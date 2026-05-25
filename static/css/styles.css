@@ -316,6 +316,15 @@ body.is-page-leaving .site-main {
   text-align: center;
 }
 
+.hero.hero--home {
+  align-items: center;
+  padding: 80px 0;
+}
+
+.hero.hero--home h1 {
+  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+}
+
 .hero h1,
 .section-copy h2,
 .section-heading h2,
@@ -324,7 +333,7 @@ body.is-page-leaving .site-main {
   margin: 0;
   font-family: "Fraunces", Georgia, serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.06;
 }
 
@@ -337,6 +346,12 @@ body.is-page-leaving .site-main {
 .hero--home .hero__lede {
   margin-right: auto;
   margin-left: auto;
+}
+
+.hero--home .hero__lede {
+  max-width: 300px;
+  font-size: 1.4rem;
+  text-wrap: balance;
 }
 
 .hero__lede {
@@ -372,18 +387,104 @@ body.is-page-leaving .site-main {
 
 .band.band--ocean-state {
   background: #020203;
+  padding: 80px 0 100px;
 }
 
-.band--ocean-state .fact-panel {
+/* Eyebrow — monospace, muted white, uppercase */
+.ocean-state-eyebrow {
+  margin: 0 0 24px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 2-col header: heading left, intro text right */
+.ocean-state-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.ocean-state-header h2 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--white);
-  background: #0a0c12;
-  border-left-color: var(--orange);
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.46);
 }
 
-.band--ocean-state .fact-panel p {
-  color: rgba(255, 255, 255, 0.72);
+.ocean-state-lede {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.65);
 }
+
+/* Content row: small text block left + wide image right */
+.ocean-state-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.ocean-state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ocean-state-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.ocean-state-row__text {
+  flex-shrink: 0;
+  width: min(330px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ocean-state-row__heading {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.ocean-state-row__body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ocean-state-row__image {
+  flex: 1;
+  max-width: 750px;
+}
+
+.ocean-state-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 
 .band--paper {
   background: var(--paper);
@@ -426,12 +527,16 @@ body.is-page-leaving .site-main {
 .documentary-copy {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 112px clamp(40px, 5vw, 72px) 112px max(20px, calc((100vw - 1240px) / 2));
+  justify-content: flex-start;
+  padding: 112px clamp(40px, 5vw, 72px) 112px clamp(20px, 3vw, 40px);
 }
 
 .documentary-copy .section-copy {
-  max-width: 560px;
+  max-width: 100%;
+}
+
+.documentary-copy .section-copy h2 {
+  font-size: clamp(2rem, 3vw, 3.25rem);
 }
 
 .band.take-action-feature,
@@ -530,7 +635,7 @@ body.is-page-leaving .site-main {
 .documentary-image {
   height: 100%;
   max-height: none;
-  border-radius: 0;
+  border-radius: 16px;
   box-shadow: none;
 }
 
@@ -809,7 +914,7 @@ body.is-page-leaving .site-main {
 
 .section-heading {
   max-width: 860px;
-  margin-bottom: 48px;
+  margin-bottom: 160px;
 }
 
 .section-heading--center {
@@ -1040,7 +1145,11 @@ body.is-page-leaving .site-main {
 .site-footer {
   padding: 64px 0;
   color: var(--white);
-  background: var(--deep);
+  background: linear-gradient(135deg, var(--bright-blue) 0%, var(--deep) 100%);
+}
+
+.site-footer .content-wrap {
+  width: calc(100% - 120px);
 }
 
 .footer-grid {

@@ -12,29 +12,45 @@
 </section>
 
 <section class="band band--blue band--ocean-state" id="whats-happening">
-  <div class="content-wrap split-layout split-layout--wide">
-    <div class="section-copy section-copy--light">
-      <p class="eyebrow">The state of the ocean</p>
+  <div class="content-wrap">
+
+    <p class="ocean-state-eyebrow">The state of the ocean</p>
+
+    <div class="ocean-state-header">
       <h2>The oceans were at the origin of life.</h2>
-      <p>They still provide the basic conditions of our life on earth. The UN Ocean Decade turns that knowledge into a
-        shared deadline for protection, restoration, and better choices.</p>
+      <p class="ocean-state-lede">They still provide the basic conditions of our life on earth. The UN Ocean Decade turns that knowledge into a shared deadline for protection, restoration, and better choices.</p>
     </div>
 
-    <div class="image-stack">
-      <img src="{{ url_for('static', filename='img/state-ocean.png') }}"
-        alt="A blue ocean surface with waves and light." class="image-frame image-frame--small">
-      <div class="fact-panel">
-        <strong>The UN sees this decade as an opportunity.</strong>
-        <p>By 2030, at least 30% of our oceans must be protected.</p>
+    <div class="ocean-state-rows">
+      <div class="ocean-state-row">
+        <div class="ocean-state-row__text">
+          <p class="ocean-state-row__heading">The UN sees this decade as an opportunity.</p>
+          <p class="ocean-state-row__body">By 2030, at least 30% of our oceans must be protected. The Ocean Decade is a rallying point — a shared scientific and political framework to restore ocean health before it's too late.</p>
+        </div>
+        <div class="ocean-state-row__image">
+          <img src="{{ url_for('static', filename='img/state-ocean.png') }}"
+            alt="Ocean state scan showing fish vitality." class="ocean-state-img">
+        </div>
+      </div>
+
+      <div class="ocean-state-row ocean-state-row--reverse">
+        <div class="ocean-state-row__text">
+          <p class="ocean-state-row__heading">Every fish carries a measurable store of vitality.</p>
+          <p class="ocean-state-row__body">bla blablablablablaba</p>
+        </div>
+        <div class="ocean-state-row__image">
+          <img src="{{ url_for('static', filename='img/fish-thermal.png') }}"
+            alt="Thermal scan of a fish showing energy distribution." class="ocean-state-img">
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <section class="band band--white problems">
   <div class="content-wrap">
-    <div class="section-heading">
-      <p class="eyebrow">Four pressure points</p>
+    <div class="section-heading section-heading--center">
       <h2>Beautiful oceans have these four ugly problems</h2>
     </div>
 
@@ -94,7 +110,7 @@
   </div>
 </section>
 
-<section class="band band--paper documentary-section">
+<section class="band band--white documentary-section">
   <div class="documentary-layout">
     <div class="documentary-copy">
       <div class="section-copy">
@@ -102,7 +118,7 @@
         <h2>Watch the documentary Our Oceans for the beauty and urgency of the sea.</h2>
       </div>
     </div>
-    <img src="{{ url_for('static', filename='img/documentary-ocean.png') }}"
+    <img src="{{ url_for('static', filename='img/Fishery.png') }}"
       alt="Ocean documentary still with a deep blue underwater scene." class="poster-image documentary-image">
   </div>
 </section>
