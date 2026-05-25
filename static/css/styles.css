@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
   --ink: #080a2e;
-  --ink-soft: #262a48;
+  --ink-soft: hsl(233, 31%, 22%);
   --deep: #10137b;
   --blue: #1436df;
   --bright-blue: #276ed7;
