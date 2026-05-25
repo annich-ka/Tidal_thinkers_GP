@@ -26,7 +26,9 @@
           </div>
         </div>
       </div>
-      <img src="{{ url_for('static', filename='img/action-30x30.png') }}" alt="Dotted fish illustrations marked with red location pins." class="take-action-media">
+      <div class="take-action-media-frame">
+        <img src="{{ url_for('static', filename='img/action-30x30.png') }}" alt="Dotted fish illustrations marked with red location pins." class="take-action-media">
+      </div>
     </div>
   </section>
 
@@ -37,7 +39,9 @@
         <h2>Ask where your seafood comes from.</h2>
         <p>Choose verified sustainable options, reduce waste, and support rules that keep fish populations above recovery thresholds.</p>
       </div>
-      <img src="{{ url_for('static', filename='img/action-overfishing.png') }}" alt="Illustrated fish shapes and underwater forms in blue." class="take-action-media">
+      <div class="take-action-media-frame">
+        <img src="{{ url_for('static', filename='img/action-overfishing.png') }}" alt="Illustrated fish shapes and underwater forms in blue." class="take-action-media">
+      </div>
     </div>
   </section>
 
@@ -48,7 +52,9 @@
         <h2>Protect places before extracting from them.</h2>
         <p>Deep ocean ecosystems recover slowly. Follow proposed mining permits, share credible research, and back a precautionary approach.</p>
       </div>
-      <img src="{{ url_for('static', filename='img/action-depth.png') }}" alt="A blue-toned ocean illustration with deep water details." class="take-action-media">
+      <div class="take-action-media-frame">
+        <img src="{{ url_for('static', filename='img/action-depth.png') }}" alt="A blue-toned ocean illustration with deep water details." class="take-action-media">
+      </div>
     </div>
   </section>
 
@@ -59,7 +65,9 @@
         <h2>Stop waste before it reaches the water.</h2>
         <p>Support deposit systems, refill habits, storm-drain cleanups, and stronger limits on chemical and plastic discharge.</p>
       </div>
-      <img src="{{ url_for('static', filename='img/action-pollution.png') }}" alt="A blue ocean illustration with textured water forms." class="take-action-media">
+      <div class="take-action-media-frame">
+        <img src="{{ url_for('static', filename='img/action-pollution.png') }}" alt="A blue ocean illustration with textured water forms." class="take-action-media">
+      </div>
     </div>
   </section>
 
@@ -70,7 +78,9 @@
         <h2>Make room for habitats to return.</h2>
         <p>Help restore dunes, shellfish reefs, kelp forests, and salt marshes that protect coastlines and store carbon.</p>
       </div>
-      <img src="{{ url_for('static', filename='img/action-restoration.png') }}" alt="A blue underwater illustration with marine shapes." class="take-action-media">
+      <div class="take-action-media-frame">
+        <img src="{{ url_for('static', filename='img/action-restoration.png') }}" alt="A blue underwater illustration with marine shapes." class="take-action-media">
+      </div>
     </div>
   </section>
 
@@ -93,7 +103,49 @@
           <a class="cta cta--light" href="#contact">View calendar</a>
         </div>
       </div>
-      <img src="{{ url_for('static', filename='img/calendar-preview.png') }}" alt="Calendar inspiration board with ocean event blocks." class="take-action-media take-action-media--calendar">
+      <div class="calendar-board" role="region" aria-label="Upcoming events calendar">
+        <div class="calendar-board__header">
+          <span>June 2026</span>
+          <span>Upcoming</span>
+        </div>
+        <div class="calendar-grid" aria-hidden="true">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+          <time datetime="2026-06-01">1</time>
+          <time datetime="2026-06-02">2</time>
+          <time datetime="2026-06-03">3</time>
+          <time datetime="2026-06-04">4</time>
+          <time datetime="2026-06-05">5</time>
+          <time class="is-event" datetime="2026-06-06">6</time>
+          <time datetime="2026-06-07">7</time>
+          <time datetime="2026-06-08">8</time>
+          <time datetime="2026-06-09">9</time>
+          <time datetime="2026-06-10">10</time>
+          <time datetime="2026-06-11">11</time>
+          <time datetime="2026-06-12">12</time>
+          <time datetime="2026-06-13">13</time>
+          <time datetime="2026-06-14">14</time>
+        </div>
+        <ol class="calendar-agenda">
+          <li>
+            <time datetime="2026-06-06">June 6</time>
+            <span>Ultimate Depth screening</span>
+          </li>
+          <li>
+            <time datetime="2026-06-20">June 20</time>
+            <span>Harbour restoration morning</span>
+          </li>
+          <li>
+            <time datetime="2026-07-04">July 4</time>
+            <span>Ocean literacy workshop</span>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 {% endblock %}

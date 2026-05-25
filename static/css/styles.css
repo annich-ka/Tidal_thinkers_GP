@@ -76,7 +76,8 @@ input {
   }
 }
 
-.site-header.is-scrolled .site-nav {
+.site-header.is-scrolled .brand--header,
+.site-header.is-scrolled .nav-menu {
   border-color: rgba(255, 255, 255, 0.28);
   background:
     linear-gradient(135deg, rgba(5, 8, 26, 0.88), rgba(6, 12, 45, 0.68)),
@@ -84,33 +85,26 @@ input {
   box-shadow: var(--shadow);
 }
 
-.site-header.is-scrolled .nav-menu {
-  background: rgba(255, 255, 255, 0.14);
+.site-header.is-scrolled .contact-link {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 18px 42px rgba(8, 10, 46, 0.22);
 }
 
 .site-nav {
-  width: min(calc(100% - 32px), 1280px);
-  min-height: 78px;
+  width: min(calc(100% - 40px), 1080px);
+  min-height: 56px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 0;
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 16px;
+  grid-template-columns: minmax(150px, 1fr) auto minmax(150px, 1fr);
+  gap: 12px;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 999px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08)),
-    rgba(13, 38, 143, 0.18);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.34),
-    inset 0 -16px 34px rgba(255, 255, 255, 0.06),
-    0 20px 55px rgba(8, 10, 46, 0.18);
-  backdrop-filter: blur(24px) saturate(145%);
-  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   pointer-events: auto;
   animation: nav-page-enter 420ms cubic-bezier(0.2, 0.72, 0.22, 1) both;
-  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 body.is-page-leaving .site-nav {
@@ -139,8 +133,21 @@ body.is-page-leaving .site-main {
 }
 
 .brand--header {
-  min-width: 180px;
-  padding: 0 14px;
+  justify-self: start;
+  min-width: 168px;
+  min-height: 56px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.07)),
+    rgba(8, 10, 46, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 14px 32px rgba(8, 10, 46, 0.12);
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .brand-icon {
@@ -150,8 +157,8 @@ body.is-page-leaving .site-main {
 }
 
 .brand-icon--decade {
-  height: 46px;
-  max-width: 168px;
+  height: 38px;
+  max-width: 146px;
 }
 
 .brand-mark {
@@ -167,14 +174,17 @@ body.is-page-leaving .site-main {
   justify-self: center;
   display: flex;
   align-items: center;
-  min-height: 60px;
-  padding: 0 14px;
+  min-height: 52px;
+  padding: 4px;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.26),
     inset 0 -10px 22px rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
 .nav-link,
@@ -194,7 +204,8 @@ body.is-page-leaving .site-main {
 }
 
 .nav-link {
-  padding: 0 18px;
+  min-height: 42px;
+  padding: 0 16px;
   color: var(--white);
   border-radius: 999px;
 }
@@ -204,14 +215,16 @@ body.is-page-leaving .site-main {
 }
 
 .contact-link {
-  min-height: 60px;
-  padding: 0 34px;
+  justify-self: end;
+  min-height: 52px;
+  padding: 0 24px;
   border-radius: 999px;
   background: var(--white);
   color: var(--deep);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
     0 14px 36px rgba(8, 10, 46, 0.14);
+  transition: box-shadow 220ms ease;
 }
 
 .menu-toggle {
@@ -396,7 +409,8 @@ body.is-page-leaving .site-main {
   max-width: 560px;
 }
 
-.take-action-feature {
+.band.take-action-feature,
+.action-panel.take-action-feature {
   padding: 0;
 }
 
@@ -423,7 +437,7 @@ body.is-page-leaving .site-main {
   padding-left: clamp(40px, 5vw, 72px);
 }
 
-.take-action-split--reverse .take-action-media {
+.take-action-split--reverse .take-action-media-frame {
   order: 1;
 }
 
@@ -495,10 +509,19 @@ body.is-page-leaving .site-main {
   box-shadow: none;
 }
 
+.take-action-media-frame {
+  width: 100%;
+  min-height: clamp(560px, 74vh, 760px);
+  position: relative;
+  overflow: hidden;
+}
+
 .take-action-media {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: clamp(560px, 74vh, 760px);
+  min-height: 0;
   max-height: none;
   object-fit: cover;
   object-position: center;
@@ -508,6 +531,95 @@ body.is-page-leaving .site-main {
 
 .take-action-media--calendar {
   object-position: center;
+}
+
+.calendar-board {
+  width: 100%;
+  min-height: clamp(560px, 74vh, 760px);
+  padding: clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.calendar-board__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+}
+
+.calendar-board__header span:last-child {
+  color: var(--red-orange);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.calendar-grid span,
+.calendar-grid time {
+  min-height: 58px;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-family: "Space Mono", monospace;
+}
+
+.calendar-grid span {
+  min-height: 42px;
+  justify-content: center;
+  color: var(--deep);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  background: rgba(20, 54, 223, 0.08);
+}
+
+.calendar-grid span:nth-child(7n),
+.calendar-grid time:nth-child(7n) {
+  border-right: 0;
+}
+
+.calendar-grid time:nth-last-child(-n + 7) {
+  border-bottom: 0;
+}
+
+.calendar-grid .is-event {
+  color: var(--white);
+  background: var(--red-orange);
+}
+
+.calendar-agenda {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar-agenda li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.calendar-agenda time {
+  color: var(--red-orange);
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
 }
 
 .fact-panel {
@@ -778,6 +890,11 @@ body.is-page-leaving .site-main {
   margin-bottom: 18px;
 }
 
+.footer-brand-logo {
+  width: min(100%, 280px);
+  height: auto;
+}
+
 .newsletter {
   display: grid;
   gap: 12px;
@@ -831,7 +948,7 @@ body.is-page-leaving .site-main {
 @media (max-width: 980px) {
   .site-nav {
     grid-template-columns: auto auto;
-    border-radius: 34px;
+    width: min(calc(100% - 24px), 1080px);
   }
 
   .menu-toggle {
@@ -905,12 +1022,17 @@ body.is-page-leaving .site-main {
     padding: 88px 20px;
   }
 
-  .take-action-split--reverse .take-action-media {
+  .take-action-split--reverse .take-action-media-frame {
     order: 0;
   }
 
-  .take-action-media {
+  .take-action-media-frame {
     min-height: 460px;
+  }
+
+  .calendar-board {
+    min-height: 460px;
+    padding: 64px 20px;
   }
 
   .action-panel__grid--reverse > div {
@@ -940,7 +1062,7 @@ body.is-page-leaving .site-main {
   }
 
   .site-nav {
-    width: min(calc(100% - 16px), 1280px);
+    width: min(calc(100% - 16px), 1080px);
   }
 
   .brand {
@@ -948,13 +1070,14 @@ body.is-page-leaving .site-main {
   }
 
   .brand--header {
-    min-width: 0;
-    padding: 0 8px;
+    min-width: 142px;
+    min-height: 50px;
+    padding: 0 12px;
   }
 
   .brand-icon--decade {
-    height: 36px;
-    max-width: 126px;
+    height: 32px;
+    max-width: 118px;
   }
 
   .brand-mark {
@@ -1006,8 +1129,30 @@ body.is-page-leaving .site-main {
     padding: 72px 14px;
   }
 
-  .take-action-media {
+  .take-action-media-frame {
     min-height: 360px;
+  }
+
+  .calendar-board {
+    min-height: auto;
+    padding: 56px 14px;
+  }
+
+  .calendar-grid span,
+  .calendar-grid time {
+    min-height: 44px;
+    padding: 8px;
+    font-size: 0.82rem;
+  }
+
+  .calendar-grid span {
+    min-height: 36px;
+    font-size: 0.68rem;
+  }
+
+  .calendar-agenda li {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .newsletter-row {

@@ -6,7 +6,7 @@ const problemCards = document.querySelectorAll(".problem-card");
 const navLinks = document.querySelectorAll(".site-nav a[href]");
 
 function updateHeaderState() {
-  header?.classList.toggle("is-scrolled", window.scrollY > 24);
+  header?.classList.toggle("is-scrolled", window.scrollY > 180);
 }
 
 menuToggle?.addEventListener("click", () => {
