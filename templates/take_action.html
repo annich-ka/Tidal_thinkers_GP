@@ -37,25 +37,31 @@
     <div class="section-copy section-copy--light action-scroll__copy-inner">
       <h2 style="font-size: 1.6rem; padding-top: 0; margin-bottom: 8px;">Plastic Pollution</h2>
       <h3 style="font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.1rem; margin: 0 0 10px;">What can you do?</h3>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch;">
-        <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
-          <strong style="font-size: 0.85rem;">Join or Create a Clean Up</strong>
-          <p style="margin: 4px 0 0; font-size: 0.8rem;">Join municipal clean-up events, or take the initiative and organize your own campaign.</p>
-        </div>
-        <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
-          <strong style="font-size: 0.85rem;">Adopt a circular lifestyle</strong>
-          <p style="margin: 4px 0 0; font-size: 0.8rem;">Choose reusable over disposable and reduce both plastic waste and CO₂ emissions.</p>
-        </div>
-        <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
-          <strong style="font-size: 0.85rem;">Make sure your toiletries are plastic-free</strong>
-          <p style="margin: 4px 0 0; font-size: 0.8rem;">Toiletries are a major source of microplastics, which get washed into the oceans straight from our bathrooms.</p>
-        </div>
-        <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
-          <strong style="font-size: 0.85rem;">Spot the logo and select alternatives</strong>
-          <div style="display: flex; gap: 6px; align-items: center; margin-top: 4px;">
-            <p style="margin: 0; font-size: 0.8rem;">It's a reminder that this product contains plastic that could end up in the ocean.</p>
-            <img src="{{ url_for('static', filename='img/plasticinproduct.jpeg') }}" style="width: 35%; border-radius: 6px;">
-          </div>
+      <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch;">
+  <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
+    <strong style="font-size: 0.85rem;">Join or Create a Clean Up</strong>
+    <p style="margin: 4px 0 0; font-size: 0.8rem;">Join municipal clean-up events, or take the initiative and organize your own campaign.</p>
+  </div>
+  <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
+    <strong style="font-size: 0.85rem;">Adopt a circular lifestyle</strong>
+    <p style="margin: 4px 0 0; font-size: 0.8rem;">Choose reusable over disposable and reduce both plastic waste and CO₂ emissions.</p>
+  </div>
+  <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
+    <strong style="font-size: 0.85rem;">Make sure your toiletries are plastic-free</strong>
+    <p style="margin: 4px 0 0; font-size: 0.8rem;">Toiletries are a major source of microplastics, which get washed into the oceans straight from our bathrooms.</p>
+  </div>
+  <div style="background: #FF4500; border-radius: 10px; padding: 10px;">
+    <strong style="font-size: 0.85rem;">Spot the logo and select alternatives</strong>
+    <div style="display: flex; gap: 6px; align-items: center; margin-top: 4px;">
+      <p style="margin: 0; font-size: 0.8rem;">It's a reminder that this product contains plastic that could end up in the ocean.</p>
+      <img src="{{ url_for('static', filename='img/plasticinproduct.jpeg') }}" style="width: 35%; border-radius: 6px;">
+    </div>
+  </div>
+  <img src="{{ url_for('static', filename='img/arrow.png') }}" style="position: absolute; width: 50px; top: 30%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);">
+  <img src="{{ url_for('static', filename='img/arrow.png') }}" style="position: absolute; width: 50px; top: 50%; right: 0%; transform: translate(0%, -50%) rotate(90deg);">
+  <img src="{{ url_for('static', filename='img/arrow.png') }}" style="position: absolute; width: 50px; top: 70%; left: 50%; transform: translate(-50%, -50%) rotate(180deg);">
+  <img src="{{ url_for('static', filename='img/arrow.png') }}" style="position: absolute; width: 50px; top: 50%; left: 0%; transform: translate(0%, -50%) rotate(270deg);">
+</div>
         </div>
       </div>
     </div>
