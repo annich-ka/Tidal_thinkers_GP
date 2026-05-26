@@ -35,7 +35,7 @@
     </div>
   </section>
 
-  <section class="action-scroll" data-action-scroll style="--slide-count: 5;">
+  <section class="action-scroll" data-action-scroll style="--slide-count: 4;">
     <div class="action-scroll__stage">
 
 <article class="action-scroll__panel" data-action-panel>
@@ -88,7 +88,7 @@
     </div>
   </div>
   <div class="action-scroll__visual">
-    <img src="{{ url_for('static', filename='img/Deep_sea_mining.jpeg') }}" alt="A blue-toned ocean illustration with deep water details.">
+    <img src="{{ url_for('static', filename='img/Deep_sea_mining.png') }}" alt="A blue-toned ocean illustration with deep water details.">
   </div>
 </article>
 
@@ -109,7 +109,7 @@
     </div>
   </div>
   <div class="action-scroll__visual">
-    <img src="{{ url_for('static', filename='img/4010fc77-2b4f-471f-b98e-354f7c38b1f1 (1).jpeg') }}" alt="A blue ocean illustration with textured water forms.">
+    <img src="{{ url_for('static', filename='img/bottom_trawling_high.png') }}" alt="A blue ocean illustration with textured water forms.">
   </div>
 </article>
 
@@ -129,85 +129,84 @@
     </div>
   </div>
   <div class="action-scroll__visual">
-    <img src="{{ url_for('static', filename='img/Whale.png') }}" alt="A blue underwater illustration with marine shapes.">
+    <img src="{{ url_for('static', filename='img/over_fishing_new.png') }}" alt="A blue underwater illustration with marine shapes.">
   </div>
 </article>
 
-      <article class="action-scroll__panel" data-action-panel>
-        <div class="action-scroll__copy">
-          <div class="section-copy section-copy--light action-scroll__copy-inner">
-            <p class="eyebrow">Next events</p>
-            <h2>Meet the ocean community in North Holland.</h2>
-            <ul class="event-list">
-              <li>
-                <time datetime="2026-05-22">May 22, 2026</time>
-                <span>Coastal Signals: citizen science walk</span>
-              </li>
-              <li>
-                <time datetime="2026-06-06">June 6, 2026</time>
-                <span>Ultimate Depth: a journey to the bottom of the sea</span>
-              </li>
-            </ul>
-            <a class="cta cta--light" href="#contact">View calendar</a>
-          </div>
-        </div>
-        <div class="action-scroll__visual">
-          <div class="calendar-board" role="region" aria-label="Upcoming events calendar">
-            <div class="calendar-board__header">
-              <span>June 2026</span>
-              <span>Upcoming</span>
-            </div>
-            <div class="calendar-grid" aria-hidden="true">
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-              <span>Sun</span>
-              <time datetime="2026-06-01">1</time>
-              <time datetime="2026-06-02">2</time>
-              <time datetime="2026-06-03">3</time>
-              <time datetime="2026-06-04">4</time>
-              <time datetime="2026-06-05">5</time>
-              <time class="is-event" datetime="2026-06-06">6</time>
-              <time datetime="2026-06-07">7</time>
-              <time datetime="2026-06-08">8</time>
-              <time datetime="2026-06-09">9</time>
-              <time datetime="2026-06-10">10</time>
-              <time datetime="2026-06-11">11</time>
-              <time datetime="2026-06-12">12</time>
-              <time datetime="2026-06-13">13</time>
-              <time datetime="2026-06-14">14</time>
-            </div>
-            <ol class="calendar-agenda">
-              <li>
-                <time datetime="2026-06-06">June 6</time>
-                <span>Ultimate Depth screening</span>
-              </li>
-              <li>
-                <time datetime="2026-06-20">June 20</time>
-                <span>Harbour restoration morning</span>
-              </li>
-              <li>
-                <time datetime="2026-07-04">July 4</time>
-                <span>Ocean literacy workshop</span>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </article>
-
       <div class="action-scroll__status" aria-hidden="true">
         <span data-action-index>01</span>
-        <span>/ 05</span>
+        <span>/ 04</span>
       </div>
       <div class="action-scroll__dots" role="group" aria-label="Take action slides">
         <button class="action-scroll__dot" type="button" data-action-target="0" aria-label="Go to plastic pollution"></button>
         <button class="action-scroll__dot" type="button" data-action-target="1" aria-label="Go to deep sea mining"></button>
         <button class="action-scroll__dot" type="button" data-action-target="2" aria-label="Go to bottom trawling"></button>
         <button class="action-scroll__dot" type="button" data-action-target="3" aria-label="Go to overfishing"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="4" aria-label="Go to events"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="events-static-panel">
+    <div class="events-static-panel__copy">
+      <div class="section-copy action-scroll__copy-inner">
+        <p class="eyebrow">Next events</p>
+        <h2>Meet the ocean community in North Holland.</h2>
+        <ul class="event-list">
+          <li>
+            <time datetime="2026-05-22">May 22, 2026</time>
+            <span>Coastal Signals: citizen science walk</span>
+          </li>
+          <li>
+            <time datetime="2026-06-06">June 6, 2026</time>
+            <span>Ultimate Depth: a journey to the bottom of the sea</span>
+          </li>
+        </ul>
+        <a class="cta" href="#contact">View calendar</a>
+      </div>
+    </div>
+    <div class="events-static-panel__calendar">
+      <div class="calendar-board" role="region" aria-label="Upcoming events calendar">
+        <div class="calendar-board__header">
+          <span>June 2026</span>
+          <span>Upcoming</span>
+        </div>
+        <div class="calendar-grid" aria-hidden="true">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+          <time datetime="2026-06-01">1</time>
+          <time datetime="2026-06-02">2</time>
+          <time datetime="2026-06-03">3</time>
+          <time datetime="2026-06-04">4</time>
+          <time datetime="2026-06-05">5</time>
+          <time class="is-event" datetime="2026-06-06">6</time>
+          <time datetime="2026-06-07">7</time>
+          <time datetime="2026-06-08">8</time>
+          <time datetime="2026-06-09">9</time>
+          <time datetime="2026-06-10">10</time>
+          <time datetime="2026-06-11">11</time>
+          <time datetime="2026-06-12">12</time>
+          <time datetime="2026-06-13">13</time>
+          <time datetime="2026-06-14">14</time>
+        </div>
+        <ol class="calendar-agenda">
+          <li>
+            <time datetime="2026-06-06">June 6</time>
+            <span>Ultimate Depth screening</span>
+          </li>
+          <li>
+            <time datetime="2026-06-20">June 20</time>
+            <span>Harbour restoration morning</span>
+          </li>
+          <li>
+            <time datetime="2026-07-04">July 4</time>
+            <span>Ocean literacy workshop</span>
+          </li>
+        </ol>
       </div>
     </div>
   </section>

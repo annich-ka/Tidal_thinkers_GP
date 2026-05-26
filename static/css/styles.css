@@ -671,7 +671,7 @@ body.is-page-leaving .site-main {
 .documentary-image {
   height: 100%;
   max-height: none;
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: none;
 }
 
@@ -713,9 +713,7 @@ body.is-page-leaving .site-main {
 .action-scroll__stage {
   position: relative;
   min-height: 100svh;
-  background:
-    radial-gradient(circle at 68% 22%, rgba(39, 110, 215, 0.18), transparent 28%),
-    #020203;
+  background: #000;
   overflow: hidden;
 }
 
@@ -748,9 +746,8 @@ body.is-page-leaving .site-main {
   padding: 72px clamp(40px, 5vw, 72px) 72px max(20px, calc((100vw - 1240px) / 2));
   display: flex;
   align-items: center;
-  background:
-    linear-gradient(90deg, rgba(2, 2, 3, 0.98), rgba(2, 2, 3, 0.82)),
-    var(--deep);
+  background: #000;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
   opacity: var(--copy-opacity, 1);
   transform: translateY(var(--copy-y, 0));
   transition: opacity 80ms linear;
@@ -764,10 +761,11 @@ body.is-page-leaving .site-main {
   min-height: 100svh;
   position: relative;
   overflow: hidden;
-  background: #070a14;
+  background: #000;
+  border-radius: 12px;
   opacity: var(--visual-opacity, 1);
   transform: translateY(var(--visual-y, 0));
-  clip-path: inset(var(--clip-top, 0%) 0 var(--clip-bottom, 0%) 0);
+  clip-path: inset(var(--clip-top, 0%) 0 var(--clip-bottom, 0%) 0 round 12px);
   will-change: clip-path, transform, opacity;
 }
 
@@ -777,6 +775,7 @@ body.is-page-leaving .site-main {
   display: block;
   object-fit: cover;
   object-position: center;
+  border-radius: 12px;
   transform: scale(var(--visual-scale, 1));
   will-change: transform;
 }
@@ -795,6 +794,38 @@ body.is-page-leaving .site-main {
   height: 100%;
   min-height: 0;
   justify-content: center;
+}
+
+/* Events static section — white background, grey dividing line */
+.events-static-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 100svh;
+  background: var(--white);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+}
+
+.events-static-panel__copy {
+  padding: 80px clamp(40px, 5vw, 72px) 80px max(20px, calc((100vw - 1240px) / 2));
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--line);
+}
+
+.events-static-panel__calendar {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 40px clamp(32px, 4vw, 60px);
+}
+
+.events-static-panel__calendar .calendar-board {
+  width: 100%;
+  min-height: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
 }
 
 /* 30×30 standalone static section (outside the scroll animation) */
@@ -1454,6 +1485,20 @@ body.is-page-leaving .site-main {
 
   .action-static-panel__visual {
     min-height: 360px;
+  }
+
+  .events-static-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .events-static-panel__copy {
+    padding: 72px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .events-static-panel__calendar {
+    padding: 48px 20px;
   }
 
   .action-scroll,
