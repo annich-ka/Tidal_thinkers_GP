@@ -849,8 +849,10 @@ body.is-page-leaving .site-main {
 .action-static-panel {
   background: var(--white);
   color: var(--ink);
-  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
   display: flex;
+  padding-bottom: 32px;
   flex-direction: column;
 }
 
@@ -862,7 +864,7 @@ body.is-page-leaving .site-main {
 }
 
 .action-static-panel__copy {
-  padding: 72px clamp(40px, 5vw, 72px) 72px max(20px, calc((100vw - 1240px) / 2));
+  padding: 40px clamp(40px, 5vw, 72px) 40px max(20px, calc((100vw - 1240px) / 2));
   display: flex;
   align-items: center;
 }
@@ -905,7 +907,7 @@ body.is-page-leaving .site-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 40px 28px;
+  padding: 80px 40px 36px;
   background: var(--white);
 }
 
