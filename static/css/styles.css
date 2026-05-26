@@ -412,6 +412,7 @@ body.is-page-leaving .site-main {
 .band.band--ocean-state {
   background: #020203;
   padding: 80px 0 100px;
+  overflow: hidden;
 }
 
 /* Eyebrow — monospace, muted white, uppercase */
@@ -470,6 +471,16 @@ body.is-page-leaving .site-main {
 
 .ocean-state-row--reverse {
   flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.ocean-state-row--reverse .ocean-state-row__image {
+  margin-bottom: -100px;
+}
+
+.ocean-state-row--reverse .ocean-state-img {
+  height: auto;
+  object-fit: cover;
 }
 
 .ocean-state-row__text {
@@ -540,6 +551,7 @@ body.is-page-leaving .site-main {
 
 .band.documentary-section {
   padding: 0;
+  border-top: 1px solid rgba(8, 10, 46, 0.35);
 }
 
 .documentary-layout {
