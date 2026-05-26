@@ -355,3 +355,22 @@ Because this is a small group project, we can keep the workflow simple:
 5. Avoid force-pushing or deleting files unless everyone agrees.
 
 This is not the most advanced Git workflow, but it is a good starting point for a small project.
+
+## 9. Sources used for Actionable Steps in Take Action Section:
+Plastic Pollution
+https://www.plasticfreejuly.org/get-involved/what-you-can-do/bathroom/
+https://www.unep.org/news-and-stories/story/7-ways-you-can-counter-scourge-single-use-plastics
+https://www.plasticsoupfoundation.org/en/your-health
+https://www.unep.org/plastic-pollution
+
+Overfishing 
+https://asc-aqua.org/business/our-label/
+https://www.msc.org/en-us/for-business/use-the-msc-blue-fish-label/brand-guidelines
+https://www.sciencedirect.com/science/article/abs/pii/S0006320713000049
+
+Deep Sea Mining
+https://iucn.org/resources/issues-brief/deep-sea-mining 
+
+Bottom Trawling
+https://unric.org/en/what-is-bottom-trawling-and-how-does-it-impact-marine-life/ 
+https://oceans-and-fisheries.ec.europa.eu/system/files/2016-09/eu-new-fish-and-aquaculture-consumer-labels-pocket-guide_en.pdf 
