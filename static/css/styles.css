@@ -924,9 +924,9 @@ body.is-page-leaving .site-main {
 }
 
 .action-static-panel__copy {
-  padding: 40px clamp(32px, 4vw, 64px) 40px clamp(32px, 4vw, 64px);
+  padding: 80px clamp(32px, 4vw, 64px) 40px clamp(32px, 4vw, 64px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .action-static-panel__visual {
@@ -1266,6 +1266,12 @@ body.is-page-leaving .site-main {
 .cta--orange {
   color: var(--deep);
   background: #f28c28;
+}
+
+.cta--outline {
+  color: var(--deep);
+  background: var(--white);
+  border-color: var(--deep);
 }
 
 .action-tags {
