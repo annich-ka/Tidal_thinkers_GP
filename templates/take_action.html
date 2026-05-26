@@ -54,9 +54,10 @@
       <p style="margin: 6px 0 0; font-size: 0.95rem;">Choose reusable over disposable and reduce both plastic waste and CO₂ emissions.</p>
     </div>
     <div style="background: #0133B6; border-radius: 12px; padding: 12px; flex: 1;">
-      <strong style="font-size: 1rem;">Spot the logo and select alternatives</strong>
-      <p style="margin: 6px 0 0; font-size: 0.95rem;">It's a reminder that this product contains plastic that could end up in the ocean.</p>
-      <img src="{{ url_for('static', filename='img/plasticinproduct.jpeg') }}" alt="Plastic in product logo" style="width: 60%; border-radius: 8px; margin-top: 8px;">
+  <strong style="font-size: 1rem;">Spot the logo and select alternatives</strong>
+  <div style="display: flex; flex-direction: row; gap: 10px; align-items: center; margin-top: 6px;">
+    <img src="{{ url_for('static', filename='img/plasticinproduct.jpeg') }}" alt="Plastic in product logo" style="width: 40%; border-radius: 8px;">
+    <p style="margin: 0; font-size: 0.95rem;">It's a reminder that this product contains plastic that could end up in the ocean.</p>
     </div>
   </div>
 </div>
