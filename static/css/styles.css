@@ -1079,6 +1079,11 @@ body.is-page-leaving .site-main {
   background: var(--white);
 }
 
+.cta--orange {
+  color: var(--deep);
+  background: var(#f28c28);
+}
+
 .action-tags {
   display: flex;
   flex-wrap: wrap;
