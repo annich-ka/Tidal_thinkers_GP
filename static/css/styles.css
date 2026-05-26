@@ -1081,7 +1081,7 @@ body.is-page-leaving .site-main {
 
 .cta--orange {
   color: var(--deep);
-  background: var(#f28c28);
+  background: #f28c28;
 }
 
 .action-tags {
