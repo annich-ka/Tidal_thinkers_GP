@@ -20,7 +20,7 @@
 
       <div class="approach-grid">
         <article class="image-card">
-          <img src="{{ url_for('static', filename='img/about-committee.png') }}" alt="People collaborating near the coast.">
+          <img src="{{ url_for('static', filename='img/commitee.jpg') }}" alt="People at a conference.">
           <div>
             <h3>About the committee</h3>
             <p>We translate research, policy goals, and local questions into events and resources that people can actually use.</p>
@@ -28,12 +28,20 @@
         </article>
 
         <article class="image-card">
-          <img src="{{ url_for('static', filename='img/UN-OceanDecade-1.75.png') }}" alt="An ocean and coastal landscape.">
+          <img src="{{ url_for('static', filename='img/UN-OceanDecade-1.75.png') }}" alt="Logo of the UN Ocean Decade.">
           <div>
             <h3>About the decade</h3>
             <p>The UN Ocean Decade is a global push to protect ocean health before 2030 and make better data available to communities.</p>
           </div>
         </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a class="cta"
+           href="{{ url_for('static', filename='docs/ocean-decade-report.pdf') }}"
+           download>
+           Download documents
+        </a>
       </div>
     </div>
   </section>
