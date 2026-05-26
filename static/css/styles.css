@@ -306,6 +306,30 @@ body.is-page-leaving .site-main {
     url("../img/hero-ocean.png") center / cover no-repeat;
 }
 
+.hero--about .hero__content {
+  justify-items: center;
+  text-align: center;
+}
+
+.hero.hero--about {
+  align-items: center;
+  padding: 80px 0;
+}
+
+.hero.hero--about h1 {
+  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero--about .hero__lede {
+  max-width: 300px;
+  font-size: 1.4rem;
+  text-wrap: balance;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .hero__content {
   display: grid;
   gap: 24px;
