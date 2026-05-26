@@ -942,23 +942,6 @@ body.is-page-leaving .site-main {
   display: block;
 }
 
-@media (min-width: 981px) {
-  .action-static-panel__body,
-  .action-scroll__panel,
-  .events-static-panel {
-    column-gap: clamp(24px, 4vw, 56px);
-    padding-inline: clamp(40px, 5vw, 72px);
-  }
-
-  .action-static-panel__copy,
-  .action-scroll__copy,
-  .events-static-panel__copy,
-  .events-static-panel__calendar {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 /* 30×30 panel */
 .action-scroll__panel--30x30 {
   grid-template-rows: auto 1fr;
