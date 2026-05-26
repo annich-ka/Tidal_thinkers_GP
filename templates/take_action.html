@@ -11,29 +11,32 @@
     </div>
   </section>
 
-  <section class="action-scroll" data-action-scroll style="--slide-count: 6;">
-    <div class="action-scroll__stage">
-      <article class="action-scroll__panel action-scroll__panel--30x30" data-action-panel>
-        <div class="action-30x30-headline-row">
-          <h2 class="action-30x30-headline">One decade, one ocean.</h2>
-        </div>
-        <div class="action-scroll__copy" style="background: white !important;">
-          <div class="section-copy action-scroll__copy-inner">
-            <p class="eyebrow">30&times;30</p>
-            <h3 class="action-30x30-subhead">Protect 30% of the ocean by 2030.</h3>
-            <p>The Ocean Decade gives importance to small actions. Start with practical steps that lower pressure on marine habitats and help people understand what is at stake.</p>
-            <div class="action-tags" aria-label="Action areas">
-              <span>Purchase second-hand</span>
-              <span>Choose lower-impact seafood</span>
-              <span>Make sustainable choices</span>
-              <span>Join local events</span>
-            </div>
+  <section class="action-static-panel">
+    <div class="action-30x30-headline-row">
+      <h2 class="action-30x30-headline">One decade, one ocean.</h2>
+    </div>
+    <div class="action-static-panel__body">
+      <div class="action-static-panel__copy">
+        <div class="section-copy action-scroll__copy-inner">
+          <p class="eyebrow">30&times;30</p>
+          <h3 class="action-30x30-subhead">Protect 30% of the ocean by 2030.</h3>
+          <p>The Ocean Decade gives importance to small actions. Start with practical steps that lower pressure on marine habitats and help people understand what is at stake.</p>
+          <div class="action-tags" aria-label="Action areas">
+            <span>Purchase second-hand</span>
+            <span>Choose lower-impact seafood</span>
+            <span>Make sustainable choices</span>
+            <span>Join local events</span>
           </div>
         </div>
-        <div class="action-scroll__visual">
-          <img src="{{ url_for('static', filename='img/jellyfish.png') }}" alt="Dotted jellyfish illustrations marked with red location pins.">
-        </div>
-      </article>
+      </div>
+      <div class="action-static-panel__visual">
+        <img src="{{ url_for('static', filename='img/jellyfish.png') }}" alt="Dotted jellyfish illustrations marked with red location pins.">
+      </div>
+    </div>
+  </section>
+
+  <section class="action-scroll" data-action-scroll style="--slide-count: 5;">
+    <div class="action-scroll__stage">
 
 <article class="action-scroll__panel" data-action-panel>
   <div class="action-scroll__copy">
@@ -197,15 +200,14 @@
 
       <div class="action-scroll__status" aria-hidden="true">
         <span data-action-index>01</span>
-        <span>/ 06</span>
+        <span>/ 05</span>
       </div>
       <div class="action-scroll__dots" role="group" aria-label="Take action slides">
-        <button class="action-scroll__dot" type="button" data-action-target="0" aria-label="Go to 30 by 30"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="1" aria-label="Go to overfishing"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="2" aria-label="Go to deep sea pressure"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="3" aria-label="Go to pollution"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="4" aria-label="Go to restoration"></button>
-        <button class="action-scroll__dot" type="button" data-action-target="5" aria-label="Go to events"></button>
+        <button class="action-scroll__dot" type="button" data-action-target="0" aria-label="Go to plastic pollution"></button>
+        <button class="action-scroll__dot" type="button" data-action-target="1" aria-label="Go to deep sea mining"></button>
+        <button class="action-scroll__dot" type="button" data-action-target="2" aria-label="Go to bottom trawling"></button>
+        <button class="action-scroll__dot" type="button" data-action-target="3" aria-label="Go to overfishing"></button>
+        <button class="action-scroll__dot" type="button" data-action-target="4" aria-label="Go to events"></button>
       </div>
     </div>
   </section>
