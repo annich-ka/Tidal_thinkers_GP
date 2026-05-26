@@ -13,11 +13,14 @@
 
   <section class="action-scroll" data-action-scroll style="--slide-count: 6;">
     <div class="action-scroll__stage">
-      <article class="action-scroll__panel" data-action-panel>
+      <article class="action-scroll__panel action-scroll__panel--30x30" data-action-panel>
+        <div class="action-30x30-headline-row">
+          <h2 class="action-30x30-headline">One decade, one ocean.</h2>
+        </div>
         <div class="action-scroll__copy">
-          <div class="section-copy section-copy--light action-scroll__copy-inner">
-            <p class="eyebrow">One decade, one ocean</p>
-            <h2>Protect 30% of the ocean by 2030.</h2>
+          <div class="section-copy action-scroll__copy-inner">
+            <p class="eyebrow">30&times;30</p>
+            <h3 class="action-30x30-subhead">Protect 30% of the ocean by 2030.</h3>
             <p>The Ocean Decade gives importance to small actions. Start with practical steps that lower pressure on marine habitats and help people understand what is at stake.</p>
             <div class="action-tags" aria-label="Action areas">
               <span>Purchase second-hand</span>
@@ -28,7 +31,7 @@
           </div>
         </div>
         <div class="action-scroll__visual">
-          <img src="{{ url_for('static', filename='img/action-30x30.png') }}" alt="Dotted fish illustrations marked with red location pins.">
+          <img src="{{ url_for('static', filename='img/jellyfish.png') }}" alt="Dotted jellyfish illustrations marked with red location pins.">
         </div>
       </article>
 
