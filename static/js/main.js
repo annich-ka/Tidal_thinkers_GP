@@ -3,11 +3,16 @@ const hero = document.querySelector(".hero");
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const newsletter = document.querySelector("[data-newsletter]");
+const siteNotice = document.querySelector("[data-site-notice]");
+const siteNoticePanel = siteNotice?.querySelector(".site-notice__panel");
+const siteNoticeMessage = siteNotice?.querySelector("[data-site-notice-message]");
+const noticeTriggers = document.querySelectorAll("[data-notice-message]");
 const problemCards = document.querySelectorAll(".problem-card");
 const navLinks = document.querySelectorAll(".site-nav a[href]");
 const actionScrollSections = document.querySelectorAll("[data-action-scroll]");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const desktopHeaderQuery = window.matchMedia("(min-width: 981px)");
+let lastFocusedElement = null;
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -15,6 +20,32 @@ function clamp(value, min, max) {
 
 function smoothstep(value) {
   return value * value * (3 - 2 * value);
+}
+
+function openSiteNotice(message) {
+  if (!siteNotice) {
+    window.alert(message);
+    return;
+  }
+
+  if (siteNoticeMessage) {
+    siteNoticeMessage.textContent = message;
+  }
+
+  lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  siteNotice.hidden = false;
+  document.body.classList.add("has-site-notice");
+  siteNoticePanel?.focus();
+}
+
+function closeSiteNotice() {
+  if (!siteNotice || siteNotice.hidden) {
+    return;
+  }
+
+  siteNotice.hidden = true;
+  document.body.classList.remove("has-site-notice");
+  lastFocusedElement?.focus();
 }
 
 function updateHeaderState() {
@@ -125,6 +156,25 @@ navMenu?.addEventListener("click", (event) => {
   }
 });
 
+noticeTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    openSiteNotice(trigger.getAttribute("data-notice-message") || "This feature is still in progress.");
+  });
+});
+
+siteNotice?.addEventListener("click", (event) => {
+  if (event.target === siteNotice || (event.target instanceof Element && event.target.closest("[data-site-notice-close]"))) {
+    closeSiteNotice();
+  }
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeSiteNotice();
+  }
+});
+
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     if (
@@ -188,8 +238,10 @@ newsletter?.addEventListener("submit", (event) => {
   const input = newsletter.querySelector("input[type='email']");
 
   if (message) {
-    message.textContent = "Thanks. We'll keep you posted.";
+    message.textContent = "Newsletter sign-up is still in progress.";
   }
+
+  openSiteNotice("The newsletter is still under development and subject to approval from our project partner.");
 
   if (input instanceof HTMLInputElement) {
     input.value = "";
