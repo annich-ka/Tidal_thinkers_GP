@@ -554,6 +554,23 @@ body.is-page-leaving .site-main {
   border-top: 1px solid rgba(8, 10, 46, 0.35);
 }
 
+.band.follow {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(8, 10, 46, 0.52), rgba(8, 10, 46, 0.64)),
+    url("../img/follow.jpg") center / cover no-repeat;
+}
+
+.band.follow .eyebrow {
+  margin-bottom: 2rem;
+}
+
+.band.follow h2 {
+  margin-bottom: 3rem;
+}
+
 .documentary-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
